@@ -1,0 +1,12 @@
+dataset_name: alzheimer
+dataset: AlzheimerDataset
+agent: AlzheimerAgent
+root_dir: "./data/AugmentedAlzheimerDataset"
+annotations_dir: "./data/imageset.csv"
+random_seed: 42
+validation_split: 0.1
+mean: 0.2956
+std: 0.3172
+
+label_to_idx: {'MildDemented': 0, 'NonDemented': 1, 'VeryMildDemented': 2, 'ModerateDemented': 3}
+idx_to_labels: {0: 'MildDemented', 1: 'NonDemented', 2: 'VeryMildDemented', 3: 'ModerateDemented'}

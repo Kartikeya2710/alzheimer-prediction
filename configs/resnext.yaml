@@ -1,0 +1,42 @@
+model_name: resnext
+model_version: "50"
+model: ResNeXt
+mode: test
+
+layers: {
+  "50": [
+    [3, 128, 256, 32],
+    [4, 256, 512, 32],
+    [6, 512, 1024, 32],
+    [3, 1024, 2048, 32]
+  ],
+
+  "101": [
+    [3, 128, 256, 32],
+    [4, 256, 512, 32],
+    [23, 512, 1024, 32],
+    [3, 1024, 2048, 32]
+  ],
+
+  "152": [
+    [3, 128, 256, 32],
+    [8, 256, 512, 32],
+    [36, 512, 1024, 32],
+    [3, 1024, 2048, 32]
+  ]
+}
+
+cuda: true
+gpu_device: 0
+seed: 42
+checkpoint_file: 'model_best.pth.tar'
+
+input_size: [224, 224]
+batch_size: 64
+epochs: 30
+save_every: 1
+validate_every: 1
+
+learning_rate: 0.0001
+num_classes: 4
+in_channels: 1
