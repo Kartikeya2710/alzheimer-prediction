@@ -7,16 +7,14 @@ def main():
                                          formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     arg_parser.add_argument(
-        '-model',
         '--model-config',
-        default='None',
+        default=None,
         help='The model configuration file in yaml format',
         required=True)
     
     arg_parser.add_argument(
-        '-dataset',
         '--dataset-config',
-        default='None',
+        default=None,
         help='The dataset configuration file in yaml format',
         required=True
     )

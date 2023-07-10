@@ -16,7 +16,7 @@ git clone https://github.com/Kartikeya2710/alzheimer-prediction.git
 
 2. Install the requirements from `requirements.txt`
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 </details>
@@ -26,10 +26,17 @@ pip install -r requirements.txt
 
 #### CLI
 
-You can use it directly in the Command Line Interface (CLI):
+You can use it directly from the Command Line Interface (CLI):
 
 ```bash
-python3 main.py -model configs/resnext.yaml -dataset configs/alzheimer.yaml
+python3 main.py --model-config configs/models/resnext.yaml --dataset-config configs/datasets/alzheimer.yaml
+```
+
+Note: You can set the `mode` of your model to `train` or `test` in its config file
+<h5 a><strong><code>model.yaml</code></strong></h5>
+
+```yaml
+mode: train # or test
 ```
 
 </details>
